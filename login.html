@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول / التسجيل</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <h1>يوب للتصميم الداخلي ذ م م</h1>
+        <ul>
+          <li><a href="../client/clients.html" data-i18n="clients">العملاء</a></li>
+          <li><a href="../Quotation/Quotations.html" data-i18n="quotations">العروض</a></li>
+          <li><a href="../Product/Products.html" data-i18n="products">المنتجات</a></li>
+          <li><a href="../Invoice/Invoices.html" data-i18n="invoices">الفواتير</a></li>
+          <li><a href="../Contract/Contracts.html" data-i18n="contracts">العقود</a></li>
+          <li><a href="../Data/Datas.html" data-i18n="data">البيانات</a></li>
+            <li>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div id="auth-container">
+        <h1 data-i18n="welcome">مرحبًا بكم في يوب للتصميم الداخلي ذ م م</h1>
+        <div id="auth-form">
+            <h2 id="form-title" data-i18n="login_register">تسجيل الدخول / التسجيل</h2>
+            <form id="loginForm">
+                <label for="emailOrPhone" data-i18n="email_or_phone">البريد الإلكتروني أو رقم الهاتف:</label>
+                <input type="text" id="emailOrPhone" placeholder="أدخل البريد الإلكتروني أو رقم الهاتف" required>
+                <button type="submit" class="glow-button" data-i18n="send_otp">إرسال رمز التحقق</button>
+            </form>
+            <form id="otpForm" style="display: none;">
+                <label for="otp" data-i18n="enter_otp">أدخل رمز التحقق:</label>
+                <input type="text" id="otp" placeholder="أدخل رمز التحقق" required>
+                <button type="submit" class="glow-button" data-i18n="verify_otp">تحقق من رمز التحقق</button>
+            </form>
+            <p id="switchText">
+                <span data-i18n="no_account">ليس لديك حساب؟</span>
+                <a href="#" id="switchLink" data-i18n="register_here">سجل هنا</a>
+            </p>
+        </div>
+    </div>
+    <script src="../lang/language.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
