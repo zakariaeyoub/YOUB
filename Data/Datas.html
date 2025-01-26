@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة البيانات</title>
+    <link rel="stylesheet" href="datas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+      <h1>يوب للتصميم الداخلي ذ م م</h1>
+        <ul>
+          <li><a href="../client/clients.html" data-i18n="clients">العملاء</a></li>
+          <li><a href="../Quotation/Quotations.html" data-i18n="quotations">العروض</a></li>
+          <li><a href="../Product/Products.html" data-i18n="products">المنتجات</a></li>
+          <li><a href="../Invoice/Invoices.html" data-i18n="invoices">الفواتير</a></li>
+          <li><a href="../Contract/Contracts.html" data-i18n="contracts">العقود</a></li>
+          <li><a href="../Data/Datas.html" data-i18n="data">البيانات</a></li>
+            <li>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1 data-i18n="data">إدارة البيانات</h1>
+        <div id="dataTabs">
+            <button class="glow-button" onclick="showTab('clients')" data-i18n="clients">العملاء</button>
+            <button class="glow-button" onclick="showTab('quotations')" data-i18n="quotations">العروض</button>
+            <button class="glow-button" onclick="showTab('products')" data-i18n="products">المنتجات</button>
+            <button class="glow-button" onclick="showTab('invoices')" data-i18n="invoices">الفواتير</button>
+            <button class="glow-button" onclick="showTab('contracts')" data-i18n="contracts">العقود</button>
+        </div>
+        <div id="clientsTab" class="tabContent">
+            <h2 data-i18n="clients">العملاء</h2>
+            <table id="clientTable">
+                <thead>
+                    <tr>
+                        <th data-i18n="clientId">معرف العميل</th>
+                        <th data-i18n="clientName">اسم العميل</th>
+                        <th data-i18n="phoneNumber">رقم الهاتف</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="quotationsTab" class="tabContent" style="display: none;">
+            <h2 data-i18n="quotations">العروض</h2>
+            <table id="quotationTable">
+                <thead>
+                    <tr>
+                        <th data-i18n="quotationId">معرف العرض</th>
+                        <th data-i18n="clientName">اسم العميل</th>
+                        <th data-i18n="date">التاريخ</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="productsTab" class="tabContent" style="display: none;">
+            <h2 data-i18n="products">المنتجات</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th data-i18n="productId">معرف المنتج</th>
+                        <th data-i18n="productName">اسم المنتج</th>
+                        <th data-i18n="productPrice">سعر المنتج</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="invoicesTab" class="tabContent" style="display: none;">
+            <h2 data-i18n="invoices">الفواتير</h2>
+            <table id="invoiceTable">
+                <thead>
+                    <tr>
+                        <th data-i18n="invoiceId">معرف الفاتورة</th>
+                        <th data-i18n="clientName">اسم العميل</th>
+                        <th data-i18n="date">التاريخ</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="contractsTab" class="tabContent" style="display: none;">
+            <h2 data-i18n="contracts">العقود</h2>
+            <table id="contractTable">
+                <thead>
+                    <tr>
+                        <th data-i18n="contractId">معرف العقد</th>
+                        <th data-i18n="clientName">اسم العميل</th>
+                        <th data-i18n="projectLocation">موقع المشروع</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../lang/language.js"></script>
+    <script src="datas.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة العملاء</title>
+    <link rel="stylesheet" href="clients.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <h1>يوب للتصميم الداخلي ذ م م</h1>
+        <ul>
+          <li><a href="../client/clients.html" data-i18n="clients">العملاء</a></li>
+          <li><a href="../Quotation/Quotations.html" data-i18n="quotations">العروض</a></li>
+          <li><a href="../Product/Products.html" data-i18n="products">المنتجات</a></li>
+          <li><a href="../Invoice/Invoices.html" data-i18n="invoices">الفواتير</a></li>
+          <li><a href="../Contract/Contracts.html" data-i18n="contracts">العقود</a></li>
+          <li><a href="../Data/Datas.html" data-i18n="data">البيانات</a></li>
+            <li>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1 data-i18n="clients">إدارة العملاء</h1>
+        <form id="clientForm">
+            <label for="date" data-i18n="date">تاريخ الإدخال:</label>
+            <input type="date" id="date" required>
+            <label for="clientId" data-i18n="clientId">معرف العميل:</label>
+            <input type="text" id="clientId" readonly>
+            <label for="clientName" data-i18n="clientName">اسم العميل:</label>
+            <input type="text" id="clientName" required>
+            <label for="siteLocation" data-i18n="siteLocation">موقع الموقع:</label>
+            <input type="text" id="siteLocation" required>
+            <label for="phoneNumber" data-i18n="phoneNumber">رقم الهاتف:</label>
+            <input type="text" id="phoneNumber" required>
+            <label for="address" data-i18n="address">العنوان:</label>
+            <textarea id="address" required></textarea>
+            <label for="email" data-i18n="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" required>
+            <label for="moreInfo" data-i18n="moreInfo">معلومات إضافية:</label>
+            <textarea id="moreInfo"></textarea>
+            <button type="submit" class="glow-button" data-i18n="save">حفظ العميل</button>
+        </form>
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <th data-i18n="clientId">معرف العميل</th>
+                    <th data-i18n="clientName">اسم العميل</th>
+                    <th data-i18n="phoneNumber">رقم الهاتف</th>
+                    <th data-i18n="actions">الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../lang/language.js"></script>
+    <script src="clients.js"></script>
+</body>
+</html>

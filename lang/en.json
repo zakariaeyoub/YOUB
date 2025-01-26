@@ -1,0 +1,18 @@
+{
+    "clients": "Clients",
+    "quotations": "Quotations",
+    "products": "Products",
+    "invoices": "Invoices",
+    "contracts": "Contracts",
+    "data": "Data",
+    "welcome": "Welcome to YOUB INTERIOR DESIGN LLC",
+    "login_register": "Login / Register",
+    "email_or_phone": "Email or Mobile Phone",
+    "send_otp": "Send OTP",
+    "enter_otp": "Enter OTP",
+    "verify_otp": "Verify OTP",
+    "no_account": "Don't have an account?",
+    "register_here": "Register here",
+    "have_account": "Already have an account?",
+    "login_here": "Login here"
+  }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المنتجات</title>
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <h1>يوب للتصميم الداخلي ذ م م</h1>
+        <ul>
+          <li><a href="../client/clients.html" data-i18n="clients">العملاء</a></li>
+          <li><a href="../Quotation/Quotations.html" data-i18n="quotations">العروض</a></li>
+          <li><a href="../Product/Products.html" data-i18n="products">المنتجات</a></li>
+          <li><a href="../Invoice/Invoices.html" data-i18n="invoices">الفواتير</a></li>
+          <li><a href="../Contract/Contracts.html" data-i18n="contracts">العقود</a></li>
+          <li><a href="../Data/Datas.html" data-i18n="data">البيانات</a></li>
+            <li>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1 data-i18n="products">إدارة المنتجات</h1>
+        <form id="productForm">
+            <label for="productId" data-i18n="productId">معرف المنتج:</label>
+            <input type="text" id="productId" readonly>
+            <label for="productName" data-i18n="productName">اسم المنتج:</label>
+            <input type="text" id="productName" required>
+            <label for="productDescription" data-i18n="productDescription">وصف المنتج:</label>
+            <textarea id="productDescription" required></textarea>
+            <label for="productUnit" data-i18n="productUnit">وحدة المنتج:</label>
+            <input type="text" id="productUnit" required>
+            <label for="productPrice" data-i18n="productPrice">سعر المنتج:</label>
+            <input type="number" id="productPrice" required>
+            <label for="productPhoto" data-i18n="productPhoto">صورة المنتج:</label>
+            <input type="file" id="productPhoto" accept="image/*">
+            <button type="submit" class="glow-button" data-i18n="save">حفظ المنتج</button>
+        </form>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th data-i18n="productId">معرف المنتج</th>
+                    <th data-i18n="productName">اسم المنتج</th>
+                    <th data-i18n="productDescription">وصف المنتج</th>
+                    <th data-i18n="productUnit">وحدة المنتج</th>
+                    <th data-i18n="productPrice">سعر المنتج</th>
+                    <th data-i18n="actions">الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../lang/language.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

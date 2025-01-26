@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة العروض</title>
+    <link rel="stylesheet" href="quotations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <h1>يوب للتصميم الداخلي ذ م م</h1>
+        <ul>
+          <li><a href="../client/clients.html" data-i18n="clients">العملاء</a></li>
+          <li><a href="../Quotation/Quotations.html" data-i18n="quotations">العروض</a></li>
+          <li><a href="../Product/Products.html" data-i18n="products">المنتجات</a></li>
+          <li><a href="../Invoice/Invoices.html" data-i18n="invoices">الفواتير</a></li>
+          <li><a href="../Contract/Contracts.html" data-i18n="contracts">العقود</a></li>
+          <li><a href="../Data/Datas.html" data-i18n="data">البيانات</a></li>
+            <li>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1 data-i18n="quotations">إدارة العروض</h1>
+        <form id="quotationForm">
+            <label for="quotationId" data-i18n="quotationId">معرف العرض:</label>
+            <input type="text" id="quotationId" readonly>
+            <label for="clientName" data-i18n="clientName">اسم العميل:</label>
+            <select id="clientName" required></select>
+            <label for="date" data-i18n="date">تاريخ العرض:</label>
+            <input type="date" id="date" required>
+            <h3 data-i18n="products">المنتجات</h3>
+            <table id="productSelection">
+                <thead>
+                    <tr>
+                        <th data-i18n="product">المنتج</th>
+                        <th data-i18n="quantity">الكمية</th>
+                        <th data-i18n="unitPrice">سعر الوحدة (AED)</th>
+                        <th data-i18n="totalPrice">السعر الإجمالي (AED)</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button type="button" class="glow-button" onclick="addProductRow()" data-i18n="addProduct">إضافة منتج</button>
+            <label for="terms" data-i18n="terms">الشروط:</label>
+            <textarea id="terms" required></textarea>
+            <button type="submit" class="glow-button" data-i18n="save">حفظ العرض</button>
+        </form>
+        <table id="quotationTable">
+            <thead>
+                <tr>
+                    <th data-i18n="quotationId">معرف العرض</th>
+                    <th data-i18n="clientName">اسم العميل</th>
+                    <th data-i18n="date">التاريخ</th>
+                    <th data-i18n="totalAmount">المبلغ الإجمالي (AED)</th>
+                    <th data-i18n="actions">الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../lang/language.js"></script>
+    <script src="quotations.js"></script>
+</body>
+</html>
